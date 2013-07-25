@@ -1,15 +1,15 @@
 %define upstream_name    CPANPLUS-Shell-Default-Plugins-Prereqs
-%define upstream_version 0.07
+%define upstream_version 0.10
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Version:    %perl_convert_version 0.10
+Release:    1
 
 Summary:    Plugin for CPANPLUS to automate
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/CPANPLUS/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:    http://www.cpan.org/modules/by-module/CPANPLUS/CPANPLUS-Shell-Default-Plugins-Prereqs-0.10.tar.gz
 
 BuildRequires: perl(CPANPLUS)
 BuildRequires: perl(CPANPLUS::Dist::Build)
@@ -68,4 +68,5 @@ rm -rf %buildroot
 
 * Wed Jan 21 2009 cpan2dist 0.07-1mdv
 - initial mdv release, generated with cpan2dist
+
 
