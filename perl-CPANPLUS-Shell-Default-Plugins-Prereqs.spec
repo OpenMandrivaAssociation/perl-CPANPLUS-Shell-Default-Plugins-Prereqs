@@ -2,14 +2,14 @@
 %define upstream_version 0.10
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version 0.10
+Version:    %perl_convert_version %{upstream_version}
 Release:    1
 
 Summary:    Plugin for CPANPLUS to automate
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/CPANPLUS/CPANPLUS-Shell-Default-Plugins-Prereqs-0.10.tar.gz
+Source0:    http://www.cpan.org/modules/by-module/CPANPLUS/CPANPLUS-Shell-Default-Plugins-Prereqs-%{upstream_version}.tar.gz
 
 BuildRequires: perl(CPANPLUS)
 BuildRequires: perl(CPANPLUS::Dist::Build)
