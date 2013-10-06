@@ -29,14 +29,14 @@ the current directory if no module is specified.
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
-%make
+%{__perl} Build.PL installdirs=vendor
+./Build
 
 %check
 #make test
 
 %install
-%makeinstall_std
+./Build install destdir=%{buildroot}
 
 %clean
 
