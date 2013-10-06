@@ -18,7 +18,6 @@ BuildRequires: perl(Module::Build)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(Module::Build::Compat)
 BuildArch: noarch
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 A plugin for CPANPLUS's default shell which will display and/or install any
@@ -37,14 +36,11 @@ the current directory if no module is specified.
 #make test
 
 %install
-rm -rf %buildroot
 %makeinstall_std
 
 %clean
-rm -rf %buildroot
 
 %files
-%defattr(-,root,root)
 %doc ChangeLog README
 %{_mandir}/man3/*
 %perl_vendorlib/*
