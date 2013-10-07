@@ -41,7 +41,7 @@ the current directory if no module is specified.
 %clean
 
 %files
-%doc ChangeLog README
+%doc  README
 %{_mandir}/man3/*
 %perl_vendorlib/*
 
