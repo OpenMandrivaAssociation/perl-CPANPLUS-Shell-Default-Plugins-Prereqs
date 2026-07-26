@@ -1,15 +1,13 @@
 %define upstream_name    CPANPLUS-Shell-Default-Plugins-Prereqs
-%define upstream_version 0.10
-
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    3
+Version:    0.10
+Release:    4
 
 Summary:    Plugin for CPANPLUS to automate
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/CPANPLUS/CPANPLUS-Shell-Default-Plugins-Prereqs-%{upstream_version}.tar.gz
+Url:        https://metacpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/CPANPLUS/CPANPLUS-Shell-Default-Plugins-Prereqs-%{version}.tar.gz
 
 BuildRequires: perl(CPANPLUS)
 BuildRequires: perl(CPANPLUS::Dist::Build)
@@ -26,7 +24,7 @@ a URL or path to the directory of an unpacked module. The plugin assumes
 the current directory if no module is specified.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Build.PL installdirs=vendor
@@ -54,8 +52,7 @@ the current directory if no module is specified.
 
 * Tue Jul 28 2009 Jérôme Quelin <jquelin@mandriva.org> 0.70.0-1mdv2011.0
 + Revision: 401676
-- rebuild using %%perl_convert_version
-- fixed license field
+- rebuild using %0.10 fixed license field
 
 * Fri May 15 2009 Jérôme Quelin <jquelin@mandriva.org> 0.07-1mdv2010.0
 + Revision: 375959
